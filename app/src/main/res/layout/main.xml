@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surfaceviewclass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/Label"
+                android:text="@string/rotate" />
+
+            <SeekBar
+                android:id="@+id/select_z_rotation"
+                style="@style/SeekBar"
+                android:max="360"
+                android:progress="180" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/Label"
+                android:text="@string/color" >
+            </TextView>
+
+            <SeekBar
+                android:id="@+id/select_color"
+                style="@style/SeekBar"
+                android:max="100"
+                android:progress="100" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
